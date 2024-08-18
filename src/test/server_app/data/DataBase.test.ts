@@ -57,7 +57,7 @@ describe('DataBase test suite', () => {
     expect(actualColor).toBe(expectedColor);
   });
 
-  it('should delete object', async () => {
+  it('should delete object on database', async () => {
     const id = await sut.insert(objTest);
     await sut.delete(id);
 
@@ -66,7 +66,7 @@ describe('DataBase test suite', () => {
     expect(actual).toBeUndefined();
   });
 
-  it('should get all elements', async () => {
+  it('should get all elements on database', async () => {
     await sut.insert(objTest);
     await sut.insert(objTestTwo);
     const expected = [objTest, objTestTwo];
